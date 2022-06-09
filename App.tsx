@@ -7,6 +7,8 @@ import {
   View,
 } from 'react-native';
 
+import { WebView } from 'react-native-webview';
+
 import {
   Colors,
 } from 'react-native/Libraries/NewAppScreen';
@@ -15,11 +17,17 @@ import Home from "./src/pages/Home";
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
   const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    backgroundColor: '#fff',
+
   };
   return (
     <SafeAreaView style={backgroundStyle}>
-      <Home></Home>
+      <View style={{ height: '100%', width: '100%',   overflow:'hidden'}}>
+        <WebView
+            source={{uri: 'http://qingkong-v2.rico.org.cn/'}}
+        />
+      </View>
+
     </SafeAreaView>
   );
 };
