@@ -24,7 +24,7 @@ const App = () => {
     <SafeAreaView style={backgroundStyle}>
       <View style={{ height: '100%', width: '100%',   overflow:'hidden'}}>
         <WebView
-            source={{uri: 'http://qingkong-v2.rico.org.cn/'}}
+            source={{uri: 'http://qingkong-native.rico.org.cn/'}}
         />
       </View>
 
